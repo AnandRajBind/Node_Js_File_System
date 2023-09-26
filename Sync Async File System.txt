@@ -1,0 +1,20 @@
+const fs=require('fs');
+console.log("read start ");
+// Asynchronous way to file read
+/*fs.readFile('/config/workspace/.vscode/File system/input.txt', function(err,data){
+if(err){
+    console.log('Error', err);
+    return  err;
+}
+console.log("Data", data.toString());
+console.log("Data", data);
+console.log("Read Ewd");
+return data;
+});
+console.log("read end ");*/
+
+// Synchronous way to file read
+var data=fs.readFileSync('/config/workspace/.vscode/File system/input.txt');
+console.log("Data ", data.toString());
+console.log("other stuff");
+console.log("read end ");
